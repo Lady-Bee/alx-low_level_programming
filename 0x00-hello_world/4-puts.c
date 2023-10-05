@@ -1,2 +1,6 @@
-#!/bin/bash
-gcc int puts("Programming is like building a multilingual puzzle)
+int main(){
+const char *str= "Programming is like building a multilingual puzzle";
+puts(str);
+	return 0;
+}
+
