@@ -1,6 +1,11 @@
+#include <stdio.h>
+/**
+ * main - main function
+ * Return - always outputs 0
+ */
+
 int main(){
-const char *str= "Programming is like building a multilingual puzzle";
-puts(str);
+puts("\"Programming is like building a multilingual puzzle);
 	return 0;
 }
 
