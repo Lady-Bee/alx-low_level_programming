@@ -17,21 +17,20 @@ void times_table(void)
 		for (n = 0 ; n < 10 ; n++)
 		{
 			answer = i * n;
-			if (answer < 10)
+			if (answer >= 10)
 			{
-				_putchar('0' + answer);
-				_putchar(' ');
-				_putchar(' ');
+				_putchar('0' + answer / 10);
 			}
 			else
 			{
-				_putchar('0' + answer / 10);
-				_putchar('0' + answer % 10);
 				_putchar(' ');
 			}
+			_putchar('0' + answer % 10);
+
 			if (n < 9)
 			{
 				_putchar(',');
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');
