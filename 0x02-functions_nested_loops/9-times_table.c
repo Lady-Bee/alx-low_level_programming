@@ -12,9 +12,9 @@ void times_table(void)
 
 	int answer;
 
-	for (i = 0 ; i < 10 ; i++)
+	for (i = 0 ; i <= 9 ; i++)
 	{
-		for (n = 0 ; n < 10 ; n++)
+		for (n = 0 ; n <= 9 ; n++)
 		{
 			answer = i * n;
 			if (answer >= 10)
