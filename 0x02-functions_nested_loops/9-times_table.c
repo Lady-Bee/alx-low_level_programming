@@ -8,7 +8,7 @@
 void times_table(void)
 {
 	int i;
-	int n = 9;
+	int n;
 
 	int answer;
 
