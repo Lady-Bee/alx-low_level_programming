@@ -9,7 +9,6 @@ void times_table(void)
 {
 	int i;
 	int n;
-
 	int answer;
 
 	for (i = 0 ; i <= 9 ; i++)
@@ -17,6 +16,12 @@ void times_table(void)
 		for (n = 0 ; n <= 9 ; n++)
 		{
 			answer = i * n;
+
+			if (n != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			if (answer >= 10)
 			{
 				_putchar('0' + answer / 10);
@@ -26,12 +31,6 @@ void times_table(void)
 				_putchar(' ');
 			}
 			_putchar('0' + answer % 10);
-
-			if (n < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
 		}
 		_putchar('\n');
 	}
