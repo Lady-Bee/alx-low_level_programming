@@ -26,7 +26,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%lu\n", num);
+			printf("%lu", num);
 		}
 	}
 	printf("\n");
