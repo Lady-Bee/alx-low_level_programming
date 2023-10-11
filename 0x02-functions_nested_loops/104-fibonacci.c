@@ -20,13 +20,13 @@ int main(void)
 		num = num1 + num2;
 		num1 = num2;
 		num2 = num;
-		if (i != 98)
+		if (i != 97)
 		{
-			printf(", ");
+			printf("%lu, ", num);
 		}
 		else
 		{
-			printf("%lu, ", num);
+			printf("%lu\n", num);
 		}
 	}
 	printf("\n");
