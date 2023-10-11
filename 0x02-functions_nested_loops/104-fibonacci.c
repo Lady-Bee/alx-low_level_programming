@@ -24,10 +24,7 @@ int main(void)
 		{
 			printf(", ");
 		}
-		else
-		{
-			printf("%lu\n", num);
-		}
+		printf("\n");
 	}
 	return (0);
 }
