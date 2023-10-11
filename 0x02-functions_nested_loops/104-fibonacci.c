@@ -24,6 +24,10 @@ int main(void)
 		{
 			printf(", ");
 		}
+		else
+		{
+			printf("%lu", num);
+		}
 	}
 	printf("\n");
 	return (0);
