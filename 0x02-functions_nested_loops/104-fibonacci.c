@@ -7,12 +7,12 @@
 
 int main(void)
 {
-	unsigned long long int num1 = 1;
-	unsigned long long int num2 = 2;
-	unsigned long long int num;
+	unsigned long int num1 = 1;
+	unsigned long int num2 = 2;
+	unsigned long int num;
 	int i;
 
-	printf("%llu, %llu, ", num1, num2);
+	printf("%lu, %lu, ", num1, num2);
 
 	for (i = 2; i < 98; i++)
 	{
@@ -20,9 +20,9 @@ int main(void)
 		num1 = num2;
 		num2 = num;
 
-		printf("%llu, ", num);
+		printf("%lu, ", num);
 	}
-	printf("%llu\n", num);
+	printf("%lu\n", num);
 	return (0);
 }
 
