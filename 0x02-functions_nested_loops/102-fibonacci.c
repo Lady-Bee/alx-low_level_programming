@@ -1,15 +1,16 @@
 #include <stdio.h>
 /*
- * main - this program prints the first 50 fibonacci numbers
+ * main - prints the first 50 fibonacci numbers
+ * 		starting with 1 and 2
  * Return: 0
  */
-int main (void)
+int main(void)
 {
 	unsigned long int num1 = 1;
 	unsigned long int num2 = 2;
 	unsigned long int num;
 	int i;
-	
+
 	printf("%lu, ", num1);
 	for (i = 1 ; i < 50 ; i++)
 	{
