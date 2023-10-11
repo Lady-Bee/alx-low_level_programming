@@ -22,9 +22,9 @@ int main(void)
 		num2 = num;
 		if (i != 97)
 		{
-			printf(", ");
+			printf(",");
 		}
-		printf("\n");
 	}
+	printf("\n");
 	return (0);
 }
