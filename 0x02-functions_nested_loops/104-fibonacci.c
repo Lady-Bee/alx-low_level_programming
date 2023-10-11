@@ -12,16 +12,17 @@ int main(void)
 
 	int i;
 
-	printf("%lu, %lu, ", num1, num2);
+	printf("%lu, ", num1);
 
 	for (i = 2 ; i < 98 ; i++)
 	{
+		printf("%lu", num2);
 		num = num1 + num2;
 		num1 = num2;
 		num2 = num;
 		if (i != 97)
 		{
-			printf("%lu, ", num);
+			printf(", ");
 		}
 		else
 		{
