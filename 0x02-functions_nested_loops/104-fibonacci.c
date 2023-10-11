@@ -20,7 +20,7 @@ int main(void)
 		num = num1 + num2;
 		num1 = num2;
 		num2 = num;
-		if (i != 97)
+		if (i != 98)
 		{
 			printf(", ");
 		}
