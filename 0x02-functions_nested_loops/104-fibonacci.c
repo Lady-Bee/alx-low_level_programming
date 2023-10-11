@@ -21,7 +21,7 @@ int main(void)
 		num1 = num2;
 		num2 = num;
 		if (i != 97)
-			printf(", ");
+			printf("%lu, ", num);
 	}
 	printf("\n");
 	return (0);
