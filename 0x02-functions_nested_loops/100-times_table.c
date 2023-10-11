@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_times_table - This function prints the n table
+ * print_times_table - prints input's times table
  * @n: parameter to be checked
- * Return: returns 0 when successful
+ * Return: returns void
  */
 
 void print_times_table(int n)
