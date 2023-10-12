@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - This program draws a diagonal line
- *@n: parameter
+ * @n: parameter
  * Return: returns 0 when successful
  */
 
@@ -17,7 +17,7 @@ void print_diagonal(int n)
 
 		for (a = 0 ; a < n ; a++)
 		{
-			for (i = 0 ; i <= a; i++)
+			for (i = 0 ; i <= a ; i++)
 				_putchar(' ');
 			_putchar('\\');
 			_putchar('\n');
