@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
 * str_concat - function concatenates two strings
@@ -18,7 +17,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = "";
 	}
-
 	if (s2 == NULL)
 	{
 		s2 = "";
@@ -33,7 +31,6 @@ char *str_concat(char *s1, char *s2)
 		ci++;
 
 	con = malloc(sizeof(char) * (i + ci + 1));
-
 	if (con == NULL)
 		return (NULL);
 
@@ -44,7 +41,6 @@ char *str_concat(char *s1, char *s2)
 		con[i] = s1[i];
 		i++;
 	}
-
 	while (s2[ci] != '\0')
 	{
 		con[i] = s2[ci];
@@ -52,5 +48,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	con[i] = '\0';
 	return (con);
-
 }
