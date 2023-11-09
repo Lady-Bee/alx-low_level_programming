@@ -36,15 +36,12 @@ void print_all(const char * const format, ...)
 					str = "(nil)";
 				printf("%s%s", separator, str);
 				break;
+			default:
+				printed++;
+				continue;
 		}
 		separator = ", ";
 		printed++;
-
-		if (format[printed] != 'c' && format[printed] != 'i' &&
-		format[printed] != 'f' && format[printed] != 's')
-		{
-			separator = "";
-		}
 	}
 	printf("\n");
 	va_end(args);
