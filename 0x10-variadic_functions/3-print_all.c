@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 
-	char *separator = "";
+	char *str, *separator = "";
 	int printed = 0;
 
 	va_start(args, format);
@@ -30,15 +30,12 @@ void print_all(const char * const format, ...)
 				printf("%s%f", separator, va_arg(args, double));
 				break;
 			case 's':
-				{
-					const char *str = va_arg(args, const char *);
-					
-					if (str == NULL)
-						printf("%s(nil)", separator);
-					else
-						printf("%s%s", separator, str);
-					break;
-				}
+				str = va_arg(args, char *);
+
+				if (!str)
+					str = "(nil)";
+				printf("%s%s", separator, str);
+				break;
 		}
 		separator = ", ";
 		printed++;
