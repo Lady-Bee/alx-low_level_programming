@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 		}
 		separator = ", ";
 		printed++;
-		if (format[printed] != 'c' && format[printed] != 'i' &&
+		while (format[printed] != 'c' && format[printed] != 'i' &&
 		format[printed] != 'f' && format[printed] != 's')
 		{
 			separator = "";
