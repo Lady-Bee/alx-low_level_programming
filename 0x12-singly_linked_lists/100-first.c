@@ -1,20 +1,15 @@
 #include "lists.h"
 #include <stdio.h>
 
+void print_sentence(void) __attribute__ ((constructor));
+
 /**
- * print_message - Function prints a message
+ * print_sentence - Function prints a sentence
  */
 
-void print_message(void)
+void print_sentence(void)
 {
-	char message[] = "You're beat! and yet, you must allow,\n"
-		"I bore my house upon my back!\n";
-
-	int i = 0;
-
-	for (; message[i] != '\0'; i++)
-	{
-		printf("%c", message[i]);
-	}
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
 
