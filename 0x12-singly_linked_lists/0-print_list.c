@@ -11,21 +11,19 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t nodecount = 0;
-	char buffer[20];
+	size_t node_c = 0;
 
 	while (h != NULL)
 	{
 		if (h->str == NULL)
-			write(1, "[0] (nil)\n", 11);
+			printf("[%d] %s\n", 0, "(nil)");
 		else
 		{
-			int len = sprintf(buffer, "[%d] %s\n", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->str);
 
-			write(1, buffer, len);
 		}
 		h = h->next;
-		nodecount++;
+		node_c++;
 	}
-	return (nodecount);
+	return (node_c);
 }
