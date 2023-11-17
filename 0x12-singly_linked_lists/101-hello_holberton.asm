@@ -1,15 +1,21 @@
 section .data
-    hello db 'Hello, Holberton',0
+hello_msg db `Hello, Holberton`, 10, 0
 
-section .text
-    global main
-    extern printf
-
+       global    main
+          extern    printf
 main:
-    mov rdi, hello
-    call printf
+	  mov   edi, format
+	  xor   eax, eax
+	  call  printf
+	  mov 	eax, 0
+	  ret
 
-    ; Exit the program
-    mov rax, 60         ; syscall: exit
-    xor rdi, rdi        ; status: 0
-    syscall
+; Exit the program
+    mov rax, 60        
+    xor edi, edi        
+    syscall 
+
+format: db `Hello, Holberton\n`,0
+
+
+
