@@ -1,17 +1,15 @@
 section .data
-    hello_msg db "Hello, Holberton", 10, 0  ; Message to be printed, 10 is ASCII for newline
+    hello db 'Hello, Holberton',0
 
 section .text
     global main
-
-    extern printf   ; Declare printf function from C library
+    extern printf
 
 main:
-    mov rdi, hello_msg  ; First argument: address of the string
-    call printf         ; Call printf function
+    mov rdi, hello
+    call printf
 
     ; Exit the program
-    mov rax, 60         ; System call number for exit (60 for x86-64)
-    xor edi, edi        ; Exit code 0
-    syscall             ; Invoke syscall to exit
-
+    mov rax, 60         ; syscall: exit
+    xor rdi, rdi        ; status: 0
+    syscall
