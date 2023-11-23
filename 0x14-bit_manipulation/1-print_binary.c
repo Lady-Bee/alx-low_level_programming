@@ -1,28 +1,29 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: number to print
- *
- * Return: void
+ * _pow - func calculates (base ^ power)
+ * @base: base of the exponent
+ * @power: power of the exponent
+ * Return: value of (base ^ power)
  */
 
 unsigned long int _pow(unsigned int base, unsigned int power)
 {
-	unsigned long int result = 1;
+	unsigned long int number;
+	unsigned int a;
 
-	if (power == 0)
-		return (1);
-
-	while (power)
-	{
-		if (power & 1)
-			result *= base;
-		power >>= 1;
-		base *= base;
-	}
-	return (result);
+	number = 1;
+	for (a = 1; a <= power; a++)
+		number *= base;
+	return (number);
 }
+
+
+/*
+ * print_binary - prints the binary representation of a number
+ * @n: number to print
+ * Return: void
+ */
 
 
 void print_binary(unsigned long int n)
