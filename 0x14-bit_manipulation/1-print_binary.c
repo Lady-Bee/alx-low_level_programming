@@ -7,24 +7,44 @@
  * Return: void
  */
 
+unsigned long int _pow(unsigned int base, unsigned int power)
+{
+	unsigned long int result = 1;
+
+	if (power == 0)
+		return (1);
+
+	while (power)
+	{
+		if (power & 1)
+			result *= base;
+		power >>= 1;
+		base *= base;
+	}
+	return (result);
+}
+
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
-	int flag = 0;
+	unsigned long int divisor, check;
+	char flag;
 
-	if (n == 0)
+	flag = 0;
+	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (divisor != 0)
 	{
-		printf("0");
-		return;
-	}
-	while (mask > 0)
-	{
-		if ((n & mask) || flag)
+		check = n & divisor;
+		if (check == divisor)
 		{
-			printf("%c", ((n & mask) ? '1' : '0'));
 			flag = 1;
+			_putchar('1');
 		}
-		mask = mask >> 1;
+		else if (flag == 1 || divisor == 1)
+		{
+			_putchar('0');
+		}
+		divisor >>= 1;
 	}
 }
+
