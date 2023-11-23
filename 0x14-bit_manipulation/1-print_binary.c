@@ -1,0 +1,30 @@
+#include "main.h"
+
+/**
+ * print_binary - prints the binary representation of a number
+ * @n: number to print
+ *
+ * Return: void
+ */
+
+
+void print_binary(unsigned long int n)
+{
+	unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
+	int flag = 0;
+
+	if (n == 0)
+	{
+		printf("0");
+		return;
+	}
+	while (mask > 0)
+	{
+		if ((n & mask) || flag)
+		{
+			printf("%c", ((n & mask) ? '1' : '0'));
+			flag = 1;
+		}
+		mask = mask >> 1;
+	}
+}
