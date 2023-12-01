@@ -7,6 +7,11 @@
 #include <string.h>
 #include <errno.h>
 
+void print_error_and_exit(const char *error_message);
+void print_elf_header_info(Elf64_Ehdr *header);
+int main(int argc, char *argv[]);
+
+
 /**
  * print_error_and_exit - Program prints error and exit
  * message
@@ -49,11 +54,11 @@ void print_elf_header_info(Elf64_Ehdr *header)
 			"UNIX - System V" : "Other");
 	printf("ABI Version: %d\n", header->e_ident[EI_ABIVERSION]);
 	printf("Type: %s\n", (header->e_type == ET_NONE) ? "NONE (Unknown Type)" :
-			(header->e_type == ET_REL) ? "REL (Relocatable file)"
+			(header->e_type == ET_REL) ? "REL (Relocatable file)" :
 			(header->e_type == ET_EXEC) ? "EXEC (Executable file)" :
 			(header->e_type == ET_DYN) ? "DYN (Shared object file)" :
-			(header->e_type == ET_CORE) ? "CORE (Core file)" : ("Other") :
-			printf("Entry point address: 0x%lx\n", (unsigned long)header->e_entry);
+			(header->e_type == ET_CORE) ? "CORE (Core file)" : "Other");
+	printf("Entry point address: 0x%lx\n", (unsigned long)header->e_entry);
 }
 
 
