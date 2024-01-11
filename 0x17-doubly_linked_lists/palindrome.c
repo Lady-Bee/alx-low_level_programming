@@ -1,3 +1,4 @@
+#include "lists.h"
 #include <stdio.h>
 
 char is_palindrome(unsigned int num);
